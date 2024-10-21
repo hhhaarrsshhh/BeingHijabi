@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+  .scroll::-webkit-scrollbar {
+    @apply hidden;  /* Chrome, Safari, Opera */
+  }
+
+  
+/* Add this CSS to your styles */
+.sidebar {
+  transition: transform 0.3s ease;
+  transform: translateX(-100%); /* Start off-screen */
+}
+
+.sidebar-open {
+  transform: translateX(0); /* Slide in */
+}
+.font-custom {
+  font-family: 'gilroy', sans-serif; /* Define your custom font */
+}
+
