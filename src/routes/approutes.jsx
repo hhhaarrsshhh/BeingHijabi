@@ -6,7 +6,6 @@ import Home from '../components/home'
 import Register from '../components/register';
 import Login from '../components/login';
 import Admin from '../components/admin';
-import About from '../components/about'
 import Contact from '../components/contact'
 import NotFound from '../components/NotFoundPage'
 import Loginadmin from '../components/loginadmin'
@@ -18,7 +17,6 @@ import ResetPassword from '../components/resetpassword.jsx';
 import ProductsPage from '../components/productsPage.jsx';
 import Productsforuser from '../components/productsforuser.jsx';
 import Updateproduct from '../components/updateproduct.jsx';
-
 
 import SingleProduct from '../components/SingleProduct.jsx';
 import ViewCart from '../components/viewcart.jsx';

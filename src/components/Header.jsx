@@ -175,8 +175,11 @@ const Header = () => {
             />
           </div>
           {/* Left Menu */}
-          <div className="hidden sm:flex items-center space-x-4 lg:space-x-6 ">
-            <Link to="/" className="text-black text-base font-semibold">
+          <div className="hidden sm:flex items-center space-x-4 lg:space-x-6 cursive--font">
+            <Link
+              to="/"
+              className="text-black text-base font-semibold border-b"
+            >
               Home
             </Link>
             <div className="relative group">

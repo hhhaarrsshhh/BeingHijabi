@@ -66,7 +66,6 @@ const Input = ({ id, show, setshow, fetchProductData }) => {
             placeholder="Enter your review..."
             className="flex-1 w-full px-2 py-2 border border-gray-300 rounded-lg sm:rounded-l-lg sm:rounded-r-lg focus:outline-none shadow-md transition duration-300 ease-in-out"
           />
-
           <select
             value={rating}
             onChange={(e) => setRating(e.target.value)}
@@ -80,7 +79,6 @@ const Input = ({ id, show, setshow, fetchProductData }) => {
             <option value="5">5</option>
           </select>
         </div>
-
         <button
           type="submit"
           className="w-full sm:w-auto bg-gray-100 text-black px-6 py-2 rounded-lg hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-black transition duration-300 ease-in-out shadow-md"
@@ -88,7 +86,6 @@ const Input = ({ id, show, setshow, fetchProductData }) => {
           Submit
         </button>
       </form>
-
       {showPopup && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white p-6 rounded-lg shadow-lg">

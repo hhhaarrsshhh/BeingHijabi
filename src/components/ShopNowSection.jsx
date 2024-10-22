@@ -6,10 +6,10 @@ const ShopNowSection = () => {
   return (
     <>
       <div className="bg-white py-12">
-        <h2 className="text-center text-3xl font-bold mb-4 cursive--font">
+        <h2 className="text-center text-4xl font-bold mb-4 cursive--font">
           Embrace The Affordable Luxury with Signature Scents from Fatir
         </h2>
-        <p className="mx-auto w-fit text-center">
+        <p className="mx-auto w-fit text-center text-[18px] font-[300] text-secondary">
           Experience the Art of Scent. <br />
           The meticulous blending of various fragrance notes to encapsulate a
           unique and memorable <br />

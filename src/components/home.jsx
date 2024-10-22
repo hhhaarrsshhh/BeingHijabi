@@ -14,6 +14,8 @@ import { useRef } from "react";
 import ShopNowSection from "./ShopNowSection";
 import ShopCarousel from "./ShopCarousel";
 import Reviews from "./Reviews";
+import HomeCollections from "./HomeCollections";
+import HomeBestSellers from "./HomeBestSellers";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -51,15 +53,15 @@ const Home = () => {
       <div ref={headerRef}>
         <Header />
       </div>
-
       {/* Category Links */}
       <div ref={categoryLinksRef}>{/* <CategoryLinks /> */}</div>
       <div ref={ShopMoreSectionRef}>
         <ShopMoreSection />
       </div>
-
       <ShopNowSection />
-      <ShopCarousel />
+      {/* <ShopCarousel /> */}
+      <HomeCollections />
+      <HomeBestSellers />
       {/* Featured Products */}
       <Reviews />
       {/* Footer */}
