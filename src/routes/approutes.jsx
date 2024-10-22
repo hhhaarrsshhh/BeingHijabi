@@ -1,6 +1,5 @@
 
-import React from 'react'
-import { Outlet, Routes } from "react-router-dom";
+import { Routes } from "react-router-dom";
 import { Route } from "react-router-dom";
 import Home from '../components/home'
 // import Home from  '../components/home2.jsx'
@@ -44,7 +43,6 @@ const routes = () => {
         <>
         <div  className='bg-grid'></div>
         <Routes>
-            <Route path="/" element={<Home/>}></Route>
             <Route path="/" element={<Home/>}></Route>
             <Route path="/register" element={<Register/>}></Route>
             <Route path="/login" element={<Login/>}></Route>

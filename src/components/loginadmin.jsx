@@ -1,6 +1,6 @@
 
 
-import React, { useContext, useState } from 'react';
+import { useContext, useState } from 'react';
 import { useNavigate,Link } from 'react-router-dom';
 import axios from '../utils/axios';
 import Cookies from 'js-cookie';
@@ -10,7 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { FaEye, FaEyeSlash,FaArrowLeft } from 'react-icons/fa';
 import { GoogleLogin } from '@react-oauth/google';
 import {jwtDecode} from 'jwt-decode'; 
-import Header from './Header';
+// import Header from './Header';
 import Header2 from './header2';
 
 

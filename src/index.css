@@ -1,12 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Prociono&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.scroll::-webkit-scrollbar {
+  @apply hidden; /* Chrome, Safari, Opera */
+}
 
-  .scroll::-webkit-scrollbar {
-    @apply hidden;  /* Chrome, Safari, Opera */
-  }
-
-  
 /* Add this CSS to your styles */
 .sidebar {
   transition: transform 0.3s ease;
@@ -17,6 +16,27 @@
   transform: translateX(0); /* Slide in */
 }
 .font-custom {
-  font-family: 'gilroy', sans-serif; /* Define your custom font */
+  font-family: "gilroy", sans-serif; /* Define your custom font */
+}
+.cursive--font {
+  font-family: "Prociono", serif !important;
+  font-style: normal;
+  @apply tracking-wider;
 }
 
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: #fff !important;
+}
+.swiper-pagination-bullet {
+  /* margin-top: 4rem; */
+  background: #e7e3e3;
+}
+.swiper-button-prev {
+  color: #fff !important;
+  scale: .95 !important;
+}
+.swiper-button-next {
+  color: #fff !important;
+  scale: .95 !important;
+
+}

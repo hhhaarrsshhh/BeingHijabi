@@ -64,7 +64,7 @@ const ShopByCategory = () => {
             </div>
           ))}
         </div>
-        <style jsx>{`
+        {/* <style >{`
           @keyframes marquee {
             0% { transform: translateX(0); }
             100% { transform: translateX(-50%); }
@@ -76,7 +76,7 @@ const ShopByCategory = () => {
           section:hover .animate-marquee {
             animation-play-state: paused;
           }
-        `}</style>
+        `}</style> */}
       </div>
       <ToastContainer />
     </section>
