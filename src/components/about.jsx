@@ -12,7 +12,6 @@ const AboutUs = () => {
     
     isAuthenticated ? (
       <>
-      <Header/>
       
       <div className="about-us bg-gray-100 text-gray-900 py-16 px-4 md:px-8">
         {/* Hero Section */}

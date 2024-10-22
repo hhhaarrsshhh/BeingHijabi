@@ -35,6 +35,7 @@ import CreateOrder from '../components/CreateOrder.jsx';
 import Settings from '../components/settings.jsx';
 import UserOrders from '../components/userorders.jsx';
 import PaymentComponent from '../components/paymentcomponent.jsx';
+import AboutUs from "../components/AboutUs.jsx";
 
 
 
@@ -47,7 +48,7 @@ const routes = () => {
             <Route path="/register" element={<Register/>}></Route>
             <Route path="/login" element={<Login/>}></Route>
             <Route path="/admin" element={<Admin/>}></Route>
-            <Route path="/about" element={<About/>}></Route>
+            <Route path="/about" element={<AboutUs/>}></Route>
             <Route path="/contact" element={<Contact/>}></Route>    
             <Route path='/loginadmin' element={<Loginadmin/>}></Route>
             <Route path='/registeradmin' element={<Registeradmin/>}></Route>
@@ -74,7 +75,8 @@ const routes = () => {
             <Route path='/createorder' element={<CreateOrder/>}></Route>
             <Route path='/userorder' element={<UserOrders/>}></Route>
             <Route path='/payment' element={<PaymentComponent/>}></Route>
-            <Route path="*" element={<NotFound/>}></Route>    
+            <Route path="*" element={<NotFound/>}></Route>  
+
             </Routes>   
             </>
     )

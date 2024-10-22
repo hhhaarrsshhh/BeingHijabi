@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Prociono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Forum&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -19,7 +19,8 @@
   font-family: "gilroy", sans-serif; /* Define your custom font */
 }
 .cursive--font {
-  font-family: "Prociono", serif !important;
+  font-family: "Forum", serif !important;
+  font-weight: 400;
   font-style: normal;
   @apply tracking-wider;
 }
@@ -33,10 +34,12 @@
 }
 .swiper-button-prev {
   color: #fff !important;
-  scale: .95 !important;
+  scale: 0.95 !important;
 }
 .swiper-button-next {
   color: #fff !important;
-  scale: .95 !important;
-
+  scale: 0.95 !important;
+}
+.font--forum {
+  font-family: "Forum" !important;
 }

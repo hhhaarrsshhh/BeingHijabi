@@ -23,8 +23,6 @@ const Home = () => {
 
   // References for each section
   const headerRef = useRef(null);
-  const heroSectionRef = useRef(null);
-  const homeProductRef = useRef(null);
   const categoryLinksRef = useRef(null);
   const footerRef = useRef(null);
   const ShopMoreSectionRef = useRef(null);
@@ -63,9 +61,6 @@ const Home = () => {
       <ShopNowSection />
       <ShopCarousel />
       {/* Featured Products */}
-      <div ref={homeProductRef}>
-        <Homeproduct />
-      </div>
       <Reviews />
       {/* Footer */}
       <div ref={footerRef}>

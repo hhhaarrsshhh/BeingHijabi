@@ -156,14 +156,14 @@ const Header = () => {
     <>
       {showOffer && (
         <div className="bg-white text-center py-4 relative ">
-          <h3 className="font-bold relative">
+          <div className="font-bold relative font--forum">
             use code MARHABA for Flat 10% off 💰 | Free gifts 🎁 on prepaid
             orders
             <ImCancelCircle
               className="absolute right-20 top-1 cursor-pointer"
               onClick={() => setShowOffer(false)}
             />
-          </h3>
+          </div>
         </div>
       )}
       <header className="bg-white w-full px-4 sm:px-6 ">

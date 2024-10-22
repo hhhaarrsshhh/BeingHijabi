@@ -28,7 +28,7 @@ const Reviews = () => {
   ];
 
   return (
-    <div className="bg-black mb-8 ">
+    <div className="bg-black mb-[1px] ">
       <div className="max-w-7xl mx-auto py-16">
         <Swiper
           spaceBetween={50}
