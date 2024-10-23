@@ -3,7 +3,7 @@ import { ShowToast } from "../utils/ToastUtils";
 
 export const fetchItemData = async (setItems) => {
   try {
-    const response = await axios.get("192.168.1.26:8080/item/all-items");
+    const response = await axios.get("http://localhost:1111/item/all-items");
     const { data } = response;
 
     if (data.success) {
