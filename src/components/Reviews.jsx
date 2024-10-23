@@ -45,7 +45,7 @@ const Reviews = () => {
               <div className="text-white p-6  text-center mb-28">
                 <h3 className="font-bold text-lg mb-2">{testimonial.name}</h3>
                 <div className="w-8 h-[2px] bg-white mx-auto mb-8"></div>
-                <p>{testimonial.text}</p>
+                <p className="px-20">{testimonial.text}</p>
               </div>
             </SwiperSlide>
           ))}

@@ -51,7 +51,6 @@ const Home = () => {
     <div className="home  text-gray-800 overflow-x-hidden overflow-y-auto">
       {/* Header */}
       <div ref={headerRef}>
-        <Header />
       </div>
       {/* Category Links */}
       <div ref={categoryLinksRef}>{/* <CategoryLinks /> */}</div>
@@ -59,10 +58,8 @@ const Home = () => {
         <ShopMoreSection />
       </div>
       <ShopNowSection />
-      {/* <ShopCarousel /> */}
       <HomeCollections />
       <HomeBestSellers />
-      {/* Featured Products */}
       <Reviews />
       {/* Footer */}
       <div ref={footerRef}>

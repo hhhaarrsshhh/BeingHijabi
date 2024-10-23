@@ -3,7 +3,7 @@ import Card from "./cards/Card";
 const HomeCollections = () => {
   return (
     <div className="bg-black py-12 mb-[1px]">
-      <h3 className="cursive--font text-center text-white text-6xl">
+      <h3 className="cursive--font text-center text-white md:text-6xl text-4xl">
         Exclusive Fragrance Collection
       </h3>
       <div className="flex gap-4 max-w-7xl mx-auto mt-12">

@@ -43,3 +43,11 @@
 .font--forum {
   font-family: "Forum" !important;
 }
+
+.text-secondary {
+  color: rgb(107, 90, 84);
+}
+
+.scroll-hidden::-webkit-scrollbar {
+  display: none !important;
+}

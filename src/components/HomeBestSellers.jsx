@@ -3,7 +3,7 @@ import Card from "./cards/Card";
 const HomeBestSellers = () => {
   return (
     <div className="bg-[#bebfbe] py-12 mb-[1px]">
-      <h3 className="cursive--font text-center text-black text-6xl">
+      <h3 className="cursive--font text-center text-black md:text-6xl text-4xl">
         Best Sellers
       </h3>
       <div className=" mt-12 bg-white">

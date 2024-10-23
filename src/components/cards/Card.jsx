@@ -17,14 +17,18 @@ const Card = ({ image, route, productName, price }) => {
   }, [showView]);
 
   return (
-    <div className="bg-white min-w-[330px]">
+    <div className=" min-w-[330px]">
       <Link to={route} className="inline-block">
         <div
           className="w-full h-full relative overflow-hidden"
           onMouseEnter={handleShowView}
           onMouseLeave={handleShowView}
         >
-          <img src={image} className="w-full h-full -z-10" alt="product-card" />
+          <img
+            src={image}
+            className={`w-full h-full -z-10 duration-200 transition-all ${showView ? "scale-110" : ""}`}
+            alt="product-card"
+          />
           {showView && (
             <div
               ref={cardImageRef}

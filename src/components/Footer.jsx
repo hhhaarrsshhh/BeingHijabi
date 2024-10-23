@@ -33,11 +33,13 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-black text-white py-12 ">
+    <footer className="bg-black text-white p-12 md:py-12 ">
       <div className="container grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
         {/* Get in Touch Section */}
         <div>
-          <h3 className="text-lg font-semibold mb-10 cursive--font text-[40px]  md:text-[60px]">Get in Touch</h3>
+          <h3 className="text-lg font-semibold mb-10 cursive--font text-[40px]  md:text-[60px]">
+            Get in Touch
+          </h3>
           <p>
             15, Fatir Apparels & Perfumes, Shop no. 1, besides Rosy Dry
             Cleaners, Itwara Road, Bhopal, Madhya Pradesh 462001

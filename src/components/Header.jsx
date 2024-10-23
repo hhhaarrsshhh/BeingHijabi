@@ -3,10 +3,10 @@ import { FiShoppingCart, FiX, FiSearch, FiMenu } from "react-icons/fi";
 import { FaRegUser } from "react-icons/fa6";
 import { IoBagOutline } from "react-icons/io5";
 
-import { Link, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import UserContext from "../contexts/usercontext";
 import axios from "../utils/axios";
-import { ImCancelCircle } from "react-icons/im";
+import { ImCancelCircle, ImMenu } from "react-icons/im";
 import CartContext from "../contexts/cartcontext";
 import gsap from "gsap";
 import {
@@ -19,6 +19,7 @@ import {
   FaSignInAlt,
   FaUserPlus,
   FaUserShield,
+  FaHamburger,
 } from "react-icons/fa";
 
 const Header = () => {
@@ -138,6 +139,15 @@ const Header = () => {
       setLoading(false); // Stop loading after fetching
     }
   };
+
+  const routes = [
+    { name: "Home", path: "/" },
+    { name: "Shop by Fragrance Families", path: "/fragrance-families" },
+    { name: "Shop by Categories", path: "/categories" },
+    { name: "Shop by Collections", path: "/collections" },
+    { name: "Bakhur", path: "/bakhur" },
+    { name: "All Products", path: "/all-products" },
+  ];
   useEffect(() => {
     fetchProfile();
   }, []);
@@ -176,23 +186,26 @@ const Header = () => {
           </div>
           {/* Left Menu */}
           <div className="hidden sm:flex items-center space-x-4 lg:space-x-6 cursive--font">
-            <Link
-              to="/"
-              className="text-black text-base font-semibold border-b"
-            >
-              Home
-            </Link>
-            <div className="relative group">
-              <Link
-                to="/productsforuser"
-                className="text-black text-base font-semibold"
-              >
-                Shop
-              </Link>
-            </div>
-            <Link to="/contact" className="text-black text-base font-semibold">
-              Contact
-            </Link>
+            <nav className="cursive--font p-4">
+              <ul className="flex space-x-4">
+                {routes.map((route, index) => (
+                  <li key={index}>
+                    <NavLink
+                      to={route.path}
+                      className={
+                        ({ isActive }) =>
+                          isActive
+                            ? "text-yellow-500 font-bold" // Active link styles
+                            : "hover:text-yellow-500" // Default link styles
+                      }
+                      end
+                    >
+                      {route.name}
+                    </NavLink>
+                  </li>
+                ))}
+              </ul>
+            </nav>
           </div>
 
           {/* Logo */}
@@ -315,8 +328,8 @@ const Header = () => {
             </div>
 
             {/* Hamburger Menu for Mobile */}
-            <IoBagOutline
-              className="text-white sm:hidden cursor-pointer"
+            <ImMenu
+              className="text-black sm:hidden cursor-pointer"
               size={24}
               onClick={toggleSidebar}
             />
@@ -336,39 +349,25 @@ const Header = () => {
                 size={24}
                 onClick={toggleSidebar}
               />
-              <nav className="space-y-6">
-                <Link
-                  to="/"
-                  className="flex items-center text-white text-xl"
-                  onClick={toggleSidebar}
-                >
-                  <FaHome className="mr-2" />
-                  Home
-                </Link>
-                <Link
-                  to="/shop"
-                  className="flex items-center text-white text-xl"
-                  onClick={toggleSidebar}
-                >
-                  <FaShoppingBag className="mr-2" />
-                  Shop
-                </Link>
-                <Link
-                  to="/contact"
-                  className="flex items-center text-white text-xl"
-                  onClick={toggleSidebar}
-                >
-                  <FaPhone className="mr-2" />
-                  Contact
-                </Link>
-                <Link
-                  to="/profile"
-                  className="flex items-center text-white text-xl"
-                  onClick={toggleSidebar}
-                >
-                  <FaUser className="mr-2" />
-                  Profile
-                </Link>
+              <nav className="cursive--font p-4">
+                <ul className="space-y-4">
+                  {routes.map((route, index) => (
+                    <li key={index}>
+                      <NavLink
+                        to={route.path}
+                        className={
+                          ({ isActive }) =>
+                            isActive
+                              ? "text-yellow-500 font-bold" // Active link styles
+                              : "hover:text-yellow-500 text-white" // Default link styles
+                        }
+                        end
+                      >
+                        {route.name}
+                      </NavLink>
+                    </li>
+                  ))}
+                </ul>
               </nav>
             </>
           )}
