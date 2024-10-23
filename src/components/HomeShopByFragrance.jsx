@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import floral from "./../../public/floral.jpg";
 const HomeShopByFragrance = () => {
   const fragranceFamilies = [
     {

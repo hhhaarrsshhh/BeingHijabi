@@ -11,7 +11,6 @@ import { FaEye, FaEyeSlash,FaArrowLeft } from 'react-icons/fa';
 import { GoogleLogin } from '@react-oauth/google';
 import {jwtDecode} from 'jwt-decode'; 
 // import Header from './Header';
-import Header2 from './header2';
 
 
 const Loginadmin = () => {

@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import axios from '../utils/axios';
-import Header from './Header';
 import { useNavigate } from 'react-router-dom';
 import { FaArrowLeft } from 'react-icons/fa6';
 import { toast } from 'react-toastify';

@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import axios from '../utils/axios'; // Ensure axios is configured properly
 import { toast } from 'react-toastify';
 import { FaEdit, FaTrash, FaArrowLeft, FaArrowCircleLeft, FaArrowCircleRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import Header2 from '../components/header2'; // Ensure the correct case for importing Header2
 import { useNavigate } from 'react-router-dom';
 
 const ProductsPage = () => {

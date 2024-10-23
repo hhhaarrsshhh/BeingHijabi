@@ -1,17 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import {
     FaHome,
     FaCartPlus,
-    FaUser,
     FaBox,
-    FaChartLine,
     FaCogs,
     FaTimes,
-    FaBars,
 } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import axios from '../utils/axios'; // Import axios
-import Header2 from './header2';
 
 const Orders = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);

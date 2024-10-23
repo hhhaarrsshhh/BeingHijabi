@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import { useState, useContext } from 'react';
 import axios from '../utils/axios';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
@@ -9,8 +9,7 @@ import Cookies from 'js-cookie';
 import UserContext from '../contexts/usercontext';
 import { GoogleLogin } from '@react-oauth/google';
 import { jwtDecode } from 'jwt-decode';
-import Header from './Header';
-import Header2 from './header2';
+
 
 const Login = () => {
   const [isAuthenticated, setIsAuthenticated] = useContext(UserContext);

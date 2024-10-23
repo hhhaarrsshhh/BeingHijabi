@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import {
   FaHome,
   FaCartPlus,
@@ -6,11 +6,9 @@ import {
   FaBox,
   FaChartLine,
   FaCogs,
-  FaArrowLeft,
   FaTimes,
 } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import Header from './Header';
 import { useNavigate } from 'react-router-dom';
 
 const customers = Array.from({ length: 30 }, (_, i) => ({
