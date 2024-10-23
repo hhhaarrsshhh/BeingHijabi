@@ -4,6 +4,7 @@
 // import { toast } from 'react-toastify';
 // import UserContext from '../contexts/usercontext';
 import Header from "./Header";
+import { HiOutlineDotsHorizontal } from "react-icons/hi";
 
 import Homeproduct from "./homeProducts";
 import Footer from "./Footer";
@@ -16,6 +17,8 @@ import ShopCarousel from "./ShopCarousel";
 import Reviews from "./Reviews";
 import HomeCollections from "./HomeCollections";
 import HomeBestSellers from "./HomeBestSellers";
+import { FaHandDots } from "react-icons/fa6";
+import HomeShopByFragrance from "./HomeShopByFragrance";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -50,20 +53,26 @@ const Home = () => {
   return (
     <div className="home  text-gray-800 overflow-x-hidden overflow-y-auto">
       {/* Header */}
-      <div ref={headerRef}>
-      </div>
+      <div ref={headerRef}></div>
       {/* Category Links */}
       <div ref={categoryLinksRef}>{/* <CategoryLinks /> */}</div>
       <div ref={ShopMoreSectionRef}>
         <ShopMoreSection />
       </div>
-      <ShopNowSection />
+      <HomeShopByFragrance />
+
       <HomeCollections />
+      <ShopNowSection />
       <HomeBestSellers />
       <Reviews />
       {/* Footer */}
       <div ref={footerRef}>
         <Footer />
+      </div>
+      <div>
+        <div className="rounded-full p-4 z-[1000] bg-black text-2xl md:hidden block text-white w-fit fixed bottom-4 right-4">
+          <HiOutlineDotsHorizontal />
+        </div>
       </div>
     </div>
   );

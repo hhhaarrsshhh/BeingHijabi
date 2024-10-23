@@ -49,8 +49,9 @@ const routes = () => {
   return (
     <>
       <div className="bg-grid"></div>
-      <Header />
-
+      <div className="md:mb-28 mb-12">
+        <Header />
+      </div>
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/register" element={<Register />}></Route>

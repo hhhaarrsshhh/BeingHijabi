@@ -6,7 +6,21 @@ const HomeCollections = () => {
       <h3 className="cursive--font text-center text-white md:text-6xl text-4xl">
         Exclusive Fragrance Collection
       </h3>
-      <div className="flex gap-4 max-w-7xl mx-auto mt-12">
+      <div className="flex gap-8 overflow-hidden overflow-x-scroll scroll-hidden max-w-[90rem] mx-auto mt-12 ">
+        <Card
+          productName={"Zafran"}
+          price={"1699"}
+          image={
+            "https://static.wixstatic.com/media/b6bc2e_f610cd51adb24bf294516d8380e8dfa3~mv2.jpg/v1/fill/w_321,h_321,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/b6bc2e_f610cd51adb24bf294516d8380e8dfa3~mv2.jpg"
+          }
+        />
+        <Card
+          productName={"Zafran"}
+          price={"1699"}
+          image={
+            "https://static.wixstatic.com/media/b6bc2e_f610cd51adb24bf294516d8380e8dfa3~mv2.jpg/v1/fill/w_321,h_321,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/b6bc2e_f610cd51adb24bf294516d8380e8dfa3~mv2.jpg"
+          }
+        />
         <Card
           productName={"Zafran"}
           price={"1699"}

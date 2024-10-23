@@ -16,7 +16,7 @@ const ShopNowSection = () => {
           olfactory experience
         </p>
       </div>
-      <div className="relative md:h-[600px] h-[500px] w-full bg-cover bg-center flex items-center justify-center">
+      <div className="relative md:h-[600px] h-[300px] w-full bg-cover bg-center flex items-center justify-center">
         {/* Overlay for dimming the background */}
         <div className="absolute w-full h-full">
           <img
@@ -31,7 +31,7 @@ const ShopNowSection = () => {
         {/* Shop More Button */}
         <button
           onClick={() => navigate("/productsforuser")}
-          className="px-8 py-3 border-2 border-black/50 absolute bottom-20 hover:translate-y-1 w-fit rounded-full text-black text-lg font-medium  shadow-lg transform hover:text-white bg-white hover:bg-black transition-all duration-300 "
+          className="md:px-8 md:py-3 px-5 py-2 border-2 border-black/50 absolute bottom-20 hover:translate-y-1 w-fit rounded-full text-black text-lg font-medium  shadow-lg transform hover:text-white bg-white hover:bg-black transition-all duration-300 "
         >
           Shop More
         </button>

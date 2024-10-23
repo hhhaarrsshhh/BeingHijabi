@@ -25,7 +25,7 @@ const ShopMoreSection = () => {
         muted
       ></video>
       {/* Content */}
-      <div className="relative z-10 text-center space-y-6">
+      <div className="absolute inset-0 flex justify-center items-center flex-col z-10 text-center space-y-6 bg-black/20 ">
         {/* Line of text */}
         <p className="text-white text-3xl md:text-4xl lg:text-5xl font-normal">
           Discover the Latest Trends

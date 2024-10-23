@@ -142,9 +142,30 @@ const Header = () => {
 
   const routes = [
     { name: "Home", path: "/" },
-    { name: "Shop by Fragrance Families", path: "/fragrance-families" },
-    { name: "Shop by Categories", path: "/categories" },
-    { name: "Shop by Collections", path: "/collections" },
+    {
+      name: "Shop by Fragrance Families",
+      root: [
+        { name: "Fresh", path: "/shopfresh" },
+        { name: "Floral", path: "/shopfloral" },
+        { name: "Fruity", path: "/shopfruity" },
+        { name: "Oriental", path: "/shoporiental" },
+        { name: "Woody", path: "/shopwoody" },
+      ],
+    },
+    {
+      name: "Shop by Categories",
+      root: [
+        { name: "Attars", path: "/shopattars" },
+        { name: "Perfumes (Eau De Perfum)", path: "/shopperfum" },
+      ],
+    },
+    {
+      name: "Shop by Collections",
+      root: [
+        { name: "Exclusive Fragrance Collection", path: "/shopexclusive" },
+        { name: "Classic Fragrance Collection", path: "/shopclassic" },
+      ],
+    },
     { name: "Bakhur", path: "/bakhur" },
     { name: "All Products", path: "/all-products" },
   ];
@@ -163,20 +184,22 @@ const Header = () => {
   }, []);
 
   return (
-    <>
+    <div className="fixed top-0 left-0 w-full z-[100] ">
       {showOffer && (
         <div className="bg-white text-center py-4 relative ">
-          <div className="font-bold relative font--forum">
-            use code MARHABA for Flat 10% off 💰 | Free gifts 🎁 on prepaid
-            orders
+          <div className="font-bold relative font--forum md:text-xl text-base">
+            <div className="px-10">
+              use code MARHABA for Flat 10% off 💰 | Free gifts 🎁 on prepaid
+              orders
+            </div>
             <ImCancelCircle
-              className="absolute right-20 top-1 cursor-pointer"
+              className="absolute md:right-20 right-3 top-1 cursor-pointer"
               onClick={() => setShowOffer(false)}
             />
           </div>
         </div>
       )}
-      <header className="bg-white w-full px-4 sm:px-6 ">
+      <header className="bg-white  px-4 sm:px-6 ">
         <div className="max-w-screen-xl mx-auto flex justify-between items-center">
           <div>
             <img
@@ -190,18 +213,21 @@ const Header = () => {
               <ul className="flex space-x-4">
                 {routes.map((route, index) => (
                   <li key={index}>
-                    <NavLink
-                      to={route.path}
-                      className={
-                        ({ isActive }) =>
-                          isActive
-                            ? "text-yellow-500 font-bold" // Active link styles
-                            : "hover:text-yellow-500" // Default link styles
-                      }
-                      end
-                    >
-                      {route.name}
-                    </NavLink>
+                    {route.path && (
+                      <NavLink
+                        to={route.path}
+                        className={
+                          ({ isActive }) =>
+                            isActive
+                              ? "text-yellow-500 font-bold" // Active link styles
+                              : "hover:text-yellow-500 text-[#848584]" // Default link styles
+                        }
+                        end
+                      >
+                        {route.name}
+                      </NavLink>
+                    )}
+                    {route.root && <RootRoute route={route} />}
                   </li>
                 ))}
               </ul>
@@ -373,7 +399,55 @@ const Header = () => {
           )}
         </div>
       </header>
-    </>
+    </div>
+  );
+};
+
+const RootRoute = ({ route = {} }) => {
+  const rootRef = useRef();
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleIsOpen = () => {
+    setIsOpen((prev) => !prev);
+  };
+  useEffect(() => {
+    gsap.from(rootRef.current, {
+      y: 100,
+      opacity: 0,
+      duration: 0.5,
+    });
+  }, [isOpen]);
+  return (
+    <div
+      className="cursor-pointer relative z-[100]"
+      onMouseEnter={toggleIsOpen}
+      onMouseLeave={toggleIsOpen}
+    >
+      <span className="text-[#848584]">{route?.name}</span>
+      {isOpen && (
+        <div
+          className="flex flex-col space-y-4 opacity-100 text-center absolute w-[120%] bg-white px-2 py-4 "
+          ref={rootRef.current}
+        >
+          {route.root.map((item, index) => {
+            return (
+              <NavLink
+                key={index}
+                to={item.path}
+                className={
+                  ({ isActive }) =>
+                    isActive
+                      ? "text-yellow-500 font-bold " // Active link styles
+                      : "hover:text-yellow-500 text-[#848584]" // Default link styles
+                }
+                end
+              >
+                {item.name}
+              </NavLink>
+            );
+          })}
+        </div>
+      )}
+    </div>
   );
 };
 
