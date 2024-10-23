@@ -208,12 +208,12 @@ const Header = () => {
       )}
       <header className="bg-white  px-4 sm:px-6 ">
         <div className="max-w-screen-xl mx-auto flex justify-between items-center">
-          <div>
+          <Link to={"/"} className="inline-block">
             <img
               src="https://static.wixstatic.com/media/b6bc2e_7e30de46c7e044a48b5a902607416de4~mv2.png/v1/crop/x_384,y_200,w_1209,h_689/fill/w_170,h_97,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/logo.png"
               alt=""
             />
-          </div>
+          </Link>
           {/* Left Menu */}
           <div className="hidden sm:flex items-center space-x-4 lg:space-x-6 cursive--font">
             <nav className="cursive--font p-4">
