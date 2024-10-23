@@ -44,7 +44,7 @@ const Search = () => {
   };
 
   return (
-    <div className="relative mt-2   flex-grow w-full">
+    <div className="relative mt-32   flex-grow w-full">
       <div className="relative flex items-center max-w-7xl mx-auto gap-6">
         {/* Arrow Icon */}
         <FaArrowLeft
@@ -92,7 +92,7 @@ const Search = () => {
               suggestions.map((suggestion, index) => (
                 <div
                   key={index}
-                  className="p-3 font-semibold lg:w-full hover:bg-gray-200 cursor-pointer transition-all duration-200"
+                  className="p-3 font-semibold lg:max-w-7xl hover:bg-gray-200 cursor-pointer transition-all duration-200"
                 >
                   <Link
                     to={`/singleproduct/${suggestion._id}`}

@@ -51,7 +51,7 @@ const Contact = () => {
             alt=""
           />
         </div>
-        <div className="max-w-4xl mx-auto bg-white p-10 mt-32  z-[100] flex gap-6 w-full md:h-[26rem] border-b-[2px] border-black/90 ">
+        <div className="max-w-4xl mx-auto bg-white p-10 mt-32  z-[100] flex gap-6 w-full md:min-h-[26rem] border-b-[2px] border-black/90 flex-col md:flex-row">
           <div className="w-full space-y-12 ">
             <h1 className="text-3xl cursive--font md:text-5xl font-semibold">
               Hello from Fatir
@@ -191,7 +191,6 @@ const Contact = () => {
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58649.39360423953!2d77.32792624863278!3d23.258107699999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c68215dadb317%3A0xeb91cf73b0f91836!2sFatir%20Apparels%20%26%20Perfumes!5e0!3m2!1sen!2sin!4v1729677816904!5m2!1sen!2sin"
             height="450"
-            width={"900"}
             style={{ border: 0 }}
             allowFullscreen=""
             loading="lazy"

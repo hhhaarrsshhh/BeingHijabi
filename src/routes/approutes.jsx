@@ -33,7 +33,6 @@ import Settings from "../components/settings.jsx";
 import UserOrders from "../components/userorders.jsx";
 import PaymentComponent from "../components/paymentcomponent.jsx";
 import AboutUs from "../components/AboutUs.jsx";
-import ShopByFragranceFamilies from "../components/ShopByFragranceFamilies.jsx";
 import ShopByCollections from "../components/ShopByCollections.jsx";
 import ShopByCategories from "../components/ShopByCategories.jsx";
 import Bakhur from "../components/Bakhur.jsx";
@@ -48,6 +47,9 @@ import Shopattars from "../components/Shopattars.jsx";
 import Shopperfum from "../components/Shopperfum.jsx";
 import Shopexclusive from "../components/Shopexclusive.jsx";
 import Shopclassic from "../components/Shopclassic.jsx";
+
+
+
 
 const routes = () => {
   return (
@@ -85,7 +87,6 @@ const routes = () => {
         <Route path="/shopexclusive" element={<Shopexclusive />} />
         <Route path="/shopclassic" element={<Shopclassic />} />
         <Route path="/contact-us" element={<Contact />} />
-      
         <Route path="/shopperfum" element={<Shopperfum />} />
         <Route path="/shopfloral" element={<Shopfloral />} />
         <Route path="/shopfruity" element={<Shopfruity />} />
