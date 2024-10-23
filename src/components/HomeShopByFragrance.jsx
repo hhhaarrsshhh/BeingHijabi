@@ -39,7 +39,7 @@ const HomeShopByFragrance = () => {
           <Link
             to={family.route}
             key={index}
-            className="w-60 h-96 relative group inline-block min-w-96"
+            className="w-[330px] h-96 relative group inline-block min-w-[330px]"
           >
             <img
               src={family.image}

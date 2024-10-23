@@ -168,6 +168,13 @@ const Header = () => {
     },
     { name: "Bakhur", path: "/bakhur" },
     { name: "All Products", path: "/all-products" },
+    {
+      name: "more",
+      root: [
+        { name: "Our Story", path: "/about" },
+        { name: "Contact us", path: "/contact-us" },
+      ],
+    },
   ];
   useEffect(() => {
     fetchProfile();
@@ -184,9 +191,9 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="fixed top-0 left-0 w-full z-[100] ">
+    <div className="fixed top-0 left-0 w-full z-[1000] ">
       {showOffer && (
-        <div className="bg-white text-center py-4 relative ">
+        <div className="bg-white text-center  relative py-4">
           <div className="font-bold relative font--forum md:text-xl text-base">
             <div className="px-10">
               use code MARHABA for Flat 10% off 💰 | Free gifts 🎁 on prepaid
@@ -418,14 +425,14 @@ const RootRoute = ({ route = {} }) => {
   }, [isOpen]);
   return (
     <div
-      className="cursor-pointer relative z-[100]"
+      className="cursor-pointer relative z-[100] "
       onMouseEnter={toggleIsOpen}
       onMouseLeave={toggleIsOpen}
     >
       <span className="text-[#848584]">{route?.name}</span>
       {isOpen && (
         <div
-          className="flex flex-col space-y-4 opacity-100 text-center absolute w-[120%] bg-white px-2 py-4 "
+          className="flex flex-col space-y-4 opacity-100 text-center absolute w-[180%] bg-white px-2 py-4 z-[100] "
           ref={rootRef.current}
         >
           {route.root.map((item, index) => {
@@ -436,8 +443,8 @@ const RootRoute = ({ route = {} }) => {
                 className={
                   ({ isActive }) =>
                     isActive
-                      ? "text-yellow-500 font-bold " // Active link styles
-                      : "hover:text-yellow-500 text-[#848584]" // Default link styles
+                      ? "text-yellow-500 font-bold inline-block " // Active link styles
+                      : "hover:text-yellow-500 text-[#848584] inline-block" // Default link styles
                 }
                 end
               >

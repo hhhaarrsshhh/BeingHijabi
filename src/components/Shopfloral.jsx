@@ -1,8 +1,11 @@
+import PageTitle from "./sub-components/PageTitle";
 
 const Shopfloral = () => {
   return (
-    <div>Shopfloral</div>
-  )
+    <div>
+      <PageTitle pageTitle={"Fragrence Floral"} />
+    </div>
+  );
 }
 
 export default Shopfloral

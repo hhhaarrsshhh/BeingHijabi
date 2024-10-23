@@ -566,7 +566,6 @@ const Registeradmin = () => {
 
   return (
     <>
-    <Header/>
      <div className="flex items-center justify-center   px-4">
      <button 
                 onClick={() => navigate(-1)} 

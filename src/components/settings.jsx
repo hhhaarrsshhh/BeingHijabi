@@ -73,7 +73,6 @@ const Settings = () => {
 
   return (
     <>
-      <Header2 />
       <div className="flex scroll h-screen">
         <aside
           className={`fixed top-0 left-0 h-full bg-black text-white flex flex-col space-y-6 p-4 transition-transform duration-300 ease-in-out ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'

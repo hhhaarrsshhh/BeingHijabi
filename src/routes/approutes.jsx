@@ -44,12 +44,16 @@ import Shopfruity from "../components/Shopfruity.jsx";
 import Shoporiental from "../components/Shoporiental.jsx";
 import Shopfresh from "../components/Shopfresh.jsx";
 import Header from "../components/Header.jsx";
+import Shopattars from "../components/Shopattars.jsx";
+import Shopperfum from "../components/Shopperfum.jsx";
+import Shopexclusive from "../components/Shopexclusive.jsx";
+import Shopclassic from "../components/Shopclassic.jsx";
 
 const routes = () => {
   return (
     <>
       <div className="bg-grid"></div>
-      <div className="md:mb-28 mb-12">
+      <div className="md:mb-24 mb-12">
         <Header />
       </div>
       <Routes>
@@ -76,8 +80,13 @@ const routes = () => {
           element={<Updateproduct />}
         ></Route>
         <Route path="/singleproduct/:id" element={<SingleProduct />}></Route>
-
         <Route path="/shopwoody" element={<Shopwoody />} />
+        <Route path="/shopattars" element={<Shopattars />} />
+        <Route path="/shopexclusive" element={<Shopexclusive />} />
+        <Route path="/shopclassic" element={<Shopclassic />} />
+        <Route path="/contact-us" element={<Contact />} />
+      
+        <Route path="/shopperfum" element={<Shopperfum />} />
         <Route path="/shopfloral" element={<Shopfloral />} />
         <Route path="/shopfruity" element={<Shopfruity />} />
         <Route path="/shoporiental" element={<Shoporiental />} />

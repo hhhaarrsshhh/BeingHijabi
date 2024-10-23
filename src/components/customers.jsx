@@ -50,7 +50,6 @@ const Customers = () => {
 
   return (
     <>
-      <Header />
       <div className="h-screen flex flex-col md:flex-row bg-gray-100">
         {/* Sidebar */}
         <aside

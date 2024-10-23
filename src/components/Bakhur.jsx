@@ -1,8 +1,11 @@
+import PageTitle from "./sub-components/PageTitle";
 
 const Bakhur = () => {
   return (
-    <div>Bakhur</div>
-  )
-}
+    <div>
+      <PageTitle pageTitle={"Bakhur"} />
+    </div>
+  );
+};
 
-export default Bakhur
+export default Bakhur;

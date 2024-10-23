@@ -13,11 +13,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ShopMoreSection from "./ShopMoreSection";
 import { useRef } from "react";
 import ShopNowSection from "./ShopNowSection";
-import ShopCarousel from "./ShopCarousel";
 import Reviews from "./Reviews";
 import HomeCollections from "./HomeCollections";
 import HomeBestSellers from "./HomeBestSellers";
-import { FaHandDots } from "react-icons/fa6";
 import HomeShopByFragrance from "./HomeShopByFragrance";
 
 gsap.registerPlugin(ScrollTrigger);

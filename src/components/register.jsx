@@ -97,7 +97,6 @@ const Register = () => {
 
   return (
     <>
-    <Header2/>
     <div className="flex items-center justify-center  h-full  px-4">
     <button 
                 onClick={() => navigate(-1)} 

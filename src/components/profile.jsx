@@ -103,7 +103,6 @@ const Profile = () => {
 
   return (
     <>
-      <Header2 />
       <div className="min-h-screen flex justify-center items-center p-6">
       <button 
                 onClick={() => navigate(-1)} 

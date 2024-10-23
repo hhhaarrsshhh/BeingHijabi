@@ -85,7 +85,6 @@ const Loginadmin = () => {
 
   return (
     <>
-    <Header2/>
     <div className="flex items-center justify-center h-full bg-gray-100 px-4 py-8">
     <button 
                 onClick={() => navigate(-1)} 

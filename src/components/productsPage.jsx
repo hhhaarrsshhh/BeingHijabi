@@ -72,7 +72,6 @@ const ProductsPage = () => {
 
   return (
     <>
-      <Header2 />
       <div className="products-page p-4">
         <button 
           onClick={() => navigate(-1)} 

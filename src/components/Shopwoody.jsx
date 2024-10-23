@@ -1,8 +1,11 @@
+import PageTitle from "./sub-components/PageTitle";
 
 const Shopwoody = () => {
   return (
-    <div>Shopwoody</div>
-  )
-}
+    <div>
+      <PageTitle pageTitle={"Woody Fragrances"} />
+    </div>
+  );
+};
 
-export default Shopwoody
+export default Shopwoody;

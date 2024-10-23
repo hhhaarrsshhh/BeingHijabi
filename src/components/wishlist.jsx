@@ -117,7 +117,6 @@ const Wishlist = () => {
 
   return (
     <>
-      <Header2 />
       <div className="flex flex-col min-h-screen bg-gray-50">
         <button
           onClick={() => navigate(-1)}

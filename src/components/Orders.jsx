@@ -56,7 +56,6 @@ const Orders = () => {
 
     return (
         <>
-            <Header2 />
             <div className="flex scroll h-screen">
                 {/* Sidebar */}
                 <aside

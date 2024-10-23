@@ -1,5 +1,4 @@
 import Footer from "./Footer";
-import Header from "./Header";
 
 const AboutUs = () => {
   const contentArray = [
@@ -26,8 +25,7 @@ const AboutUs = () => {
 
   return (
     <div>
-      <Header />
-      <div className="bg-[#6a5a55] text-white py-40">
+      <div className="bg-[#6a5a55] text-white py-12">
         <h2 className="cursive--font text-center text-[40px] md:text-[80px]">
           ABOUT US
         </h2>
@@ -35,7 +33,7 @@ const AboutUs = () => {
           {contentArray.map((section, index) => (
             <li
               key={index}
-              className="mb-6 text-[16px] text-lg list-decimal leading-relaxed"
+              className="mb-6 text-[14px] text-lg list-decimal leading-relaxed"
             >
               {section}
             </li>

@@ -38,7 +38,6 @@ const ForgotPassword = () => {
 
     return (
         <>
-            <Header/>
         <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-black to-gray-100 px-4">
             <button 
                 onClick={() => navigate(-1)} 

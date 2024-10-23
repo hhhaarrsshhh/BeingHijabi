@@ -229,7 +229,6 @@ const Checkout = () => {
 
   return (
     <>
-      <Header2 />
       <div className="checkout-page p-4">
         <button
           onClick={() => navigate(-1)}

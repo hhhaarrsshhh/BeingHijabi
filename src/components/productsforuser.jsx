@@ -168,7 +168,6 @@ const Productsforuser = () => {
     return (
         <div className="flex flex-col min-h-screen bg-gray-100">
             {/* Custom Header */}
-            <Header2 />
             <button
                 onClick={() => navigate(-1)}
                 className="absolute top-16 left-4 mt-4 ml-4 flex items-center rounded-2xl text-gray-700 px-4 py-2  hover:bg-black hover:text-white transition duration-300">

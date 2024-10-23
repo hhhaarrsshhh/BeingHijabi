@@ -89,7 +89,6 @@ const Login = () => {
 
   return (
     <>
-    <Header2/>
 
       <div className="flex items-center justify-center h-full  px-4 py-8">
       <button 

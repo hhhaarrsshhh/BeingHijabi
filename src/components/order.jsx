@@ -104,7 +104,6 @@ const Order = () => {
   if (orders.length === 0) {
     return (
       <>
-        <Header />
         <div className="flex flex-col justify-center items-center mt-10 bg-white p-10 rounded-md w-full md:w-6/12 lg:w-4/12 mx-auto">
           <button
             onClick={() => navigate(-1)}
@@ -122,7 +121,6 @@ const Order = () => {
 
   return (
     <>
-      <Header />
       <div className="flex flex-col items-center mt-10 px-4 lg:px-0">
         <h2 className="text-2xl font-semibold mb-6">Orders</h2>
         <div className="w-full lg:w-8/12 bg-white p-6 shadow-md rounded-lg">

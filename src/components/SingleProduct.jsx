@@ -177,7 +177,6 @@ const SingleProduct = () => {
 
     return (
         <>
-            <Header2 />
             <div className="container mx-auto p-6">
                 <div className="flex flex-col lg:flex-row gap-8">
                 <button 

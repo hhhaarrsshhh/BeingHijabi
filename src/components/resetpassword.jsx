@@ -41,7 +41,6 @@ const ResetPassword = () => {
 
   return (
     <>
-    <Header2/>
     <div className="flex justify-center items-center h-full ">
     <button 
                 onClick={() => navigate(-1)} 

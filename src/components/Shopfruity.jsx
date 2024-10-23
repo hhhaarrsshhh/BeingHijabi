@@ -1,8 +1,11 @@
+import PageTitle from "./sub-components/PageTitle";
 
 const Shopfruity = () => {
   return (
-    <div>Shopfruity</div>
-  )
+    <div>
+      <PageTitle pageTitle={"Fragrence Fruity"} />
+    </div>
+  );
 }
 
 export default Shopfruity
