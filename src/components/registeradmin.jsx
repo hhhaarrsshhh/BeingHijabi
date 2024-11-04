@@ -567,14 +567,9 @@ const Registeradmin = () => {
   return (
     <>
      <div className="flex items-center justify-center   px-4">
-     <button 
-                onClick={() => navigate(-1)} 
-                className="absolute top-16 left-0 mt-4 ml-4 flex items-center  text-gray-700 px-4 py-2 rounded-lg hover:bg-black hover:text-white transition duration-300">
-                <FaArrowLeft className="mr-2" />
-                
-            </button>
+    
       
-      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md mt-28 ">
         <h2 className="text-2xl font-bold text-black mb-6">Register Admin Account</h2>
         {error && (
           <div className="mb-4 p-4 bg-red-100 text-red-700 border border-red-300 rounded">

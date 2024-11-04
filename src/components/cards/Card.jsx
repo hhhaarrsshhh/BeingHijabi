@@ -17,10 +17,10 @@ const Card = ({ image, route, productName, price }) => {
   }, [showView]);
 
   return (
-    <div className=" min-w-[330px]">
+    <div className=" min-w-[330px] pb-5 ">
       <Link to={route} className="inline-block">
         <div
-          className="w-full h-full relative overflow-hidden"
+          className="w-full h-full relative overflow-hidden "
           onMouseEnter={handleShowView}
           onMouseLeave={handleShowView}
         >
@@ -32,17 +32,17 @@ const Card = ({ image, route, productName, price }) => {
           {showView && (
             <div
               ref={cardImageRef}
-              className="bg-white/40 p-3 z-10 opacity-100 absolute bottom-0 w-full text-black text-center cursive--font text-xl capitalize"
+              className="bg-white/40   p-3 z-10 opacity-100 absolute bottom-0 w-full text-black text-center cursive--font text-xl capitalize"
             >
               quick view
             </div>
           )}
         </div>
-        <div className="bg-white p-4 text-center font-[300] ">
-          <div className="text-xl">{productName}</div>
-          <div>₹{price}</div>
-          <div className="text-sm">
-            taxes included <span className="underline">Free shipping</span>
+        <div className="bg-[#bebfbe] p-4 text-center font-[300] rounded-b-lg ">
+          <div className="text-2xl text-left font-semibold">{productName}</div>
+          <div className="text-left font-extrabold">₹{price}</div>
+          <div className="text-sm font-semibold text-left">
+            Taxes included <span className="underline">Free shipping</span>
           </div>
         </div>
       </Link>

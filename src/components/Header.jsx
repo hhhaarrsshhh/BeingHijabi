@@ -143,7 +143,7 @@ const Header = () => {
   const routes = [
     { name: "Home", path: "/" },
     {
-      name: "Shop by Fragrance Families",
+      name: <p className="font-bold">Fragrance Families</p>,
       root: [
         { name: "Fresh", path: "/shopfresh" },
         { name: "Floral", path: "/shopfloral" },
@@ -153,23 +153,23 @@ const Header = () => {
       ],
     },
     {
-      name: "Shop by Categories",
+      name: <p className="font-bold">Categories</p>,
       root: [
         { name: "Attars", path: "/shopattars" },
         { name: "Perfumes (Eau De Perfum)", path: "/shopperfum" },
       ],
     },
     {
-      name: "Shop by Collections",
+      name: <p className="font-bold">Collections</p>,
       root: [
-        { name: "Exclusive Fragrance Collection", path: "/shopexclusive" },
-        { name: "Classic Fragrance Collection", path: "/shopclassic" },
+        { name: "Exclusive Fragrance ", path: "/shopexclusive" },
+        { name: <p>Classic Fragrance &nbsp; &nbsp; </p>, path: "/shopclassic" },
       ],
     },
     { name: "Bakhur", path: "/bakhur" },
     { name: "All Products", path: "/all-products" },
     {
-      name: "more",
+      name: "more...",
       root: [
         { name: "Our Story", path: "/about" },
         { name: "Contact us", path: "/contact-us" },
@@ -193,9 +193,9 @@ const Header = () => {
   return (
     <div className="fixed top-0 left-0 w-full z-[1000] ">
       {showOffer && (
-        <div className="bg-white text-center  relative py-4">
-          <div className="font-bold relative font--forum md:text-xl text-base">
-            <div className="px-10">
+        <div className="bg-white text-center  relative py-4   ]">
+          <div className="font-bold relative font--forum md:text-xl text-base ">
+            <div className="px-10 ">
               use code MARHABA for Flat 10% off 💰 | Free gifts 🎁 on prepaid
               orders
             </div>
@@ -206,8 +206,8 @@ const Header = () => {
           </div>
         </div>
       )}
-      <header className="bg-white  px-4 sm:px-6 ">
-        <div className="max-w-screen-xl mx-auto flex justify-between items-center">
+      <header className="bg-white  px-4 sm:px-6  ">
+        <div className="max-w-screen-xl mx-auto flex justify-between items-center  ">
           <Link to={"/"} className="inline-block">
             <img
               src="https://static.wixstatic.com/media/b6bc2e_7e30de46c7e044a48b5a902607416de4~mv2.png/v1/crop/x_384,y_200,w_1209,h_689/fill/w_170,h_97,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/logo.png"
@@ -215,24 +215,22 @@ const Header = () => {
             />
           </Link>
           {/* Left Menu */}
-          <div className="hidden sm:flex items-center space-x-4 lg:space-x-6 cursive--font">
+          <div className="hidden  sm:flex items-center space-x-8 lg:space-x-8 cursive--font">
             <nav className="cursive--font p-4">
-              <ul className="flex space-x-4">
+              <ul className="flex space-x-10">
                 {routes.map((route, index) => (
                   <li key={index}>
                     {route.path && (
                       <NavLink
-                        to={route.path}
-                        className={
-                          ({ isActive }) =>
-                            isActive
-                              ? "text-yellow-500 font-bold" // Active link styles
-                              : "hover:text-yellow-500 text-[#848584]" // Default link styles
-                        }
-                        end
-                      >
-                        {route.name}
-                      </NavLink>
+                      to={route.path}
+                      className={({ isActive }) =>
+                        `font-bold ${isActive ? "text-yellow-500" : "hover:text-yellow-500 text-[#848584]"}`
+                      }
+                      end
+                    >
+                      {route.name}
+                    </NavLink>
+                    
                     )}
                     {route.root && <RootRoute route={route} />}
                   </li>
@@ -316,31 +314,35 @@ const Header = () => {
                       </button>
                     </>
                   ) : (
-                    <>
-                      {/* User is not authenticated: Show Sign In, Sign Up, and Sign in as Admin */}
-                      <Link
-                        to="/login"
-                        className="flex  items-center px-4 py-2 text-black hover:bg-gray-100"
-                      >
-                        <FaSignInAlt className="mr-2" /> {/* Sign In Icon */}
-                        Sign In
-                      </Link>
-                      <Link
-                        to="/register"
-                        className="flex items-center px-4 py-2 text-black hover:bg-gray-100"
-                      >
-                        <FaUserPlus className="mr-2" /> {/* Sign Up Icon */}
-                        Sign Up
-                      </Link>
-                      <Link
-                        to="/loginadmin"
-                        className="flex items-center px-4 py-2 text-black hover:bg-gray-100"
-                      >
-                        <FaUserShield className="mr-2" />{" "}
-                        {/* Sign in as Admin Icon */}
-                        As Admin
-                      </Link>
-                    </>
+                    <div className=" items-center space-y-6  p-4  mr-2 rounded ">
+  {/* User is not authenticated: Show Sign In, Sign Up, and Admin Login links */}
+  
+  <Link
+    to="/login"
+    className="flex items-center   text-black hover:bg-gray-200 rounded transition duration-150 ease-in-out"
+  >
+    <FaSignInAlt className="mr-2" /> {/* Sign In Icon */}
+    <span className="font-medium">Sign In</span>
+  </Link>
+
+  <Link
+    to="/register"
+    className="flex items-center  text-black hover:bg-gray-200 rounded transition duration-150 ease-in-out"
+  >
+    <FaUserPlus className="mr-1" /> {/* Sign Up Icon */}
+    <span className="font-medium">Sign Up</span>
+  </Link>
+
+  <Link
+    to="/loginadmin"
+    className="flex items-center  text-black hover:bg-gray-200 rounded transition duration-150 ease-in-out"
+  >
+    <FaUserShield className="mr-1" /> {/* Admin Icon */}
+    <span className="font-medium">Admin</span>
+  </Link>
+</div>
+
+
                   )}
                 </div>
               )}
@@ -387,17 +389,14 @@ const Header = () => {
                   {routes.map((route, index) => (
                     <li key={index}>
                       <NavLink
-                        to={route.path}
-                        className={
-                          ({ isActive }) =>
-                            isActive
-                              ? "text-yellow-500 font-bold" // Active link styles
-                              : "hover:text-yellow-500 text-white" // Default link styles
-                        }
-                        end
-                      >
-                        {route.name}
-                      </NavLink>
+            to={route.path}
+            className={({ isActive }) =>
+              `font-bold ${isActive ? "text-yellow-500" : "hover:text-yellow-500 text-[#848584]"}`
+            }
+            end
+          >
+            {route.name}
+          </NavLink>
                     </li>
                   ))}
                 </ul>
@@ -430,9 +429,10 @@ const RootRoute = ({ route = {} }) => {
       onMouseLeave={toggleIsOpen}
     >
       <span className="text-[#848584]">{route?.name}</span>
+
       {isOpen && (
         <div
-          className="flex flex-col space-y-4 opacity-100 text-center absolute w-[180%] bg-white px-2 py-4 z-[100] "
+          className="flex flex-col space-y-4 opacity-100 text-center absolute w-56 bg-white  border-black  rounded border-b-4 border- px-0 py-4 z-[100] "
           ref={rootRef.current}
         >
           {route.root.map((item, index) => {
@@ -440,12 +440,10 @@ const RootRoute = ({ route = {} }) => {
               <NavLink
                 key={index}
                 to={item.path}
-                className={
-                  ({ isActive }) =>
-                    isActive
-                      ? "text-yellow-500 font-bold inline-block " // Active link styles
-                      : "hover:text-yellow-500 text-[#848584] inline-block" // Default link styles
-                }
+               
+            className={({ isActive }) =>
+              `font-semibold ${isActive ? "text-yellow-500 " : "hover:text-yellow-500 text-[#848584]"}`
+            }
                 end
               >
                 {item.name}

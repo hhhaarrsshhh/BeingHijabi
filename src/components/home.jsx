@@ -21,6 +21,7 @@ import HomeShopByFragrance from "./HomeShopByFragrance";
 gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
+  
   // const [isAuthenticated, setIsAuthenticated] = useContext(UserContext);
   // const navigate = useNavigate();
 
@@ -51,7 +52,7 @@ const Home = () => {
   return (
     <div className="home  text-gray-800 overflow-x-hidden overflow-y-auto">
       {/* Header */}
-      <div ref={headerRef}></div>
+      <div ref={headerRef} className="${}"></div>
       {/* Category Links */}
       <div ref={categoryLinksRef}>{/* <CategoryLinks /> */}</div>
       <div ref={ShopMoreSectionRef}>

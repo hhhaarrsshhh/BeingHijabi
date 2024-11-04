@@ -30,7 +30,7 @@ const HomeShopByFragrance = () => {
 
   return (
     <div className="bg-[#cacbca] py-12">
-      <div className="text-4xl cursive--font font-semibold  text-center mb-12 ">
+      <div className="text-4xl cursive--font  max-sm:text-wrap max-sm:text-3xl  text-center mb-12 ">
         Shop the luxury by Fragrance Family
       </div>
       <div className="flex flex-nowrap flex-row  overflow-hidden max-w-[90rem] mx-auto overflow-x-auto gap-8 scroll-hidden">

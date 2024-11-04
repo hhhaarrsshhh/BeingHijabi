@@ -257,7 +257,7 @@ const Header2 = () => {
                     </button>
                   </>
                 ) : (
-                  <>
+                  <div className="">
                     {/* User is not authenticated: Show Sign In, Sign Up, and Sign in as Admin */}
                     <Link
                       to="/login"
@@ -271,7 +271,7 @@ const Header2 = () => {
                       className="flex items-center px-4 py-2 text-black hover:bg-gray-100"
                     >
                       <FaUserPlus className="mr-2" /> {/* Sign Up Icon */}
-                      Sign Up
+                      Sign Upp
                     </Link>
                     <Link
                       to="/loginadmin"
@@ -279,9 +279,9 @@ const Header2 = () => {
                     >
                       <FaUserShield className="mr-2" />{" "}
                       {/* Sign in as Admin Icon */}
-                      As Admin
+                      AdminNNN
                     </Link>
-                  </>
+                  </div>
                 )}
               </div>
             )}

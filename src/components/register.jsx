@@ -97,14 +97,9 @@ const Register = () => {
 
   return (
     <>
-    <div className="flex items-center justify-center  h-full  px-4">
-    <button 
-                onClick={() => navigate(-1)} 
-                className="absolute top-16 left-0 mt-4 ml-4 flex items-center  text-gray-700 px-4 py-2 rounded-lg hover:bg-black hover:text-white transition duration-300">
-                <FaArrowLeft className="mr-2" />
-                
-            </button>
-      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+    <div className="flex items-center justify-center  h-full   px-4">
+   
+      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-sm:mt-11 max-w-md">
         <h2 className="text-2xl font-bold text-black mb-6 text-left">Register Account</h2>
         <form className="space-y-4" onSubmit={handleSubmit}>
           <div>
@@ -218,14 +213,17 @@ const Register = () => {
           <span className="text-gray-500 px-4">or</span>
           <hr className="w-full border-gray-300" />
         </div>
-        <GoogleLogin
-          className="w-full mt-4 py-3 bg-red-500 text-white rounded-lg hover:bg-red-700 flex items-center justify-center"
-          onSuccess={handleGoogleLoginSuccess}
-          onError={() => {
-            console.log('Login Failed');
-            setError('Google login failed. Please try again.');
-          }}
-        />
+        <div className="flex flex-col items-center w-full" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+  <GoogleLogin
+    className="w-full mt-4 py-3 bg-red-500 text-white rounded-lg hover:bg-red-700 flex "
+    onSuccess={handleGoogleLoginSuccess}
+    onError={() => {
+      console.log('Login Failed');
+      setError('Google login failed. Please try again.');
+    }}
+  />
+</div>
+
       </div>
     </div>
     </>

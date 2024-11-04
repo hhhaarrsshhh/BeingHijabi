@@ -1,11 +1,12 @@
 import { useNavigate } from "react-router-dom";
 
+
 const ShopMoreSection = () => {
   const navigate = useNavigate();
 
   return (
     <div
-      className="relative md:min-h-[500px] min-h-[300px]  w-full bg-cover bg-center flex items-center justify-center"
+      className="relative md:min-h-[500px] min-h-[300px]  w-full   bg-cover bg-center flex items-center justify-center"
       style={
         {
           // backgroundImage: `url('https://beinghijabi.com/cdn/shop/files/IMG_5839.jpg')`, // Replace with your own image URL
