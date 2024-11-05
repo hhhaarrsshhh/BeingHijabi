@@ -201,7 +201,7 @@ const Header = () => {
               Use code <span className="text-yellow-500 text-2xl font-bold">MARHABA</span> for Flat 10% off 💰
             </p>
             <p className="text-lg">
-              Plus, enjoy free gifts 🎁 on all prepaid orders!
+              Plus,enjoy free gifts 🎁 on all prepaid orders!
             </p>
 
             {/* Close Icon */}
