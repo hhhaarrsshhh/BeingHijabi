@@ -195,14 +195,24 @@ const Header = () => {
       {showOffer && (
         <div className="bg-white text-center  relative py-4   ]">
           <div className="font-bold relative font--forum md:text-xl text-base ">
-            <div className="px-10 ">
-              use code MARHABA for Flat 10% off 💰 | Free gifts 🎁 on prepaid
-              orders
-            </div>
+          <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm z-[999]">
+          <div className="relative p-6 bg-[#333333] text-white rounded-lg shadow-lg max-w-sm text-center space-y-4">
+            <p className="text-lg font-semibold">
+              Use code <span className="text-yellow-500 text-2xl font-bold">MARHABA</span> for Flat 10% off 💰
+            </p>
+            <p className="text-lg">
+              Plus, enjoy free gifts 🎁 on all prepaid orders!
+            </p>
+
+            {/* Close Icon */}
             <ImCancelCircle
-              className="absolute md:right-20 right-3 top-1 cursor-pointer"
+              className="absolute top-0 right-2   text-white hover:text-white cursor-pointer"
               onClick={() => setShowOffer(false)}
+              size={24}
             />
+          </div>
+        </div>
+          
           </div>
         </div>
       )}

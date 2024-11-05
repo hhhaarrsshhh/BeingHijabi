@@ -34,11 +34,11 @@ const products = [
 
   return (
     <div className="bg-[#bebfbe] py-12 mb-[1px]">
-      <h3 className="cursive--font font-extrabold text-center text-black md:text-6xl text-4xl">
+      <h3 className="cursive--font font-extrabold text-center pt-12 text-black md:text-6xl text-4xl">
         Best Sellers
       </h3>
       <div className="mt-12 bg-white">
-        <h2 className="text-xl cursive--font text-center py-6">Best Sellers</h2>
+        <h2 className="text-xl cursive--font text-center py-6"></h2>
         <div className="flex gap-4 mx-auto max-w-7xl overflow-hidden overflow-x-auto scroll-hidden">
           {products.map((product, index) => (
             <Card
