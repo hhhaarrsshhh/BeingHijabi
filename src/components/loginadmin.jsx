@@ -163,20 +163,24 @@ const Loginadmin = () => {
             Register
           </span>
         </p>
-          <div className="flex items-center justify-between mt-4">
-            <hr className="w-full border-gray-300" />
-            <span className="text-gray-500 px-4">or</span>
-            <hr className="w-full border-gray-300" />
-          </div>
-          
-          <GoogleLogin
-            onSuccess={handleGoogleLoginSuccess}
-            onError={() => {
-              console.log('Login Failed');
-              setError('Google login failed. Please try again.');
-            }}
-          />
+        <div className="flex items-center justify-between mt-4">
+  <hr className="w-full border-gray-300" />
+  <span className="text-gray-500 px-4">or</span>
+  <hr className="w-full border-gray-300" />
+</div>
+<div className="flex justify-center">
+  <GoogleLogin
+    className="w-3/4 mt-4 py-3 bg-red-500 text-white rounded-lg hover:bg-red-700 flex items-center justify-center"
+    onSuccess={handleGoogleLoginSuccess}
+    onError={() => {
+      console.log('Login Failed');
+      setError('Google login failed. Please try again.');
+    }}
+  />
+</div>
+
         </div>
+        
       </div>
     </>
   

@@ -38,10 +38,10 @@ const Card = ({ image, route, productName, price }) => {
             </div>
           )}
         </div>
-        <div className="bg-[#bebfbe] p-4 text-center font-[300] rounded-b-lg ">
-          <div className="text-2xl text-left font-semibold">{productName}</div>
-          <div className="text-left font-extrabold">₹{price}</div>
-          <div className="text-sm font-semibold text-left">
+        <div className="bg-white p-4 text-center font-[300] rounded-b-lg ">
+          <div className="text-xl text-left font-semibold">{productName}</div>
+          <div className="text-left font-bold">₹{price}</div>
+          <div className="text-sm text-gray-600 font-semibold text-left">
             Taxes included <span className="underline">Free shipping</span>
           </div>
         </div>

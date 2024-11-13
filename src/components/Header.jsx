@@ -196,7 +196,7 @@ const Header = () => {
         <div className="bg-white text-center  relative py-4   ]">
           <div className="font-bold relative font--forum md:text-xl text-base ">
           <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm z-[999]">
-          <div className="relative p-6 bg-[#333333] text-white rounded-lg shadow-lg max-w-sm text-center space-y-4">
+          <div className="relative p-6 bg-[#333333] text-white rounded-lg shadow-lg max-w-sm max-sm:mb-40 text-center space-y-4">
             <p className="text-lg font-semibold">
               Use code <span className="text-yellow-500 text-2xl font-bold">MARHABA</span> for Flat 10% off 💰
             </p>

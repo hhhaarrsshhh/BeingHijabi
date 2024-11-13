@@ -90,12 +90,7 @@ const Login = () => {
     <>
 
       <div className="flex items-center justify-center h-full  px-4 py-8">
-      <button 
-                onClick={() => navigate(-1)} 
-                className="absolute top-16 left-0 mt-4 ml-4 flex items-center  text-gray-700 px-4 py-2 rounded-lg hover:bg-black hover:text-white transition duration-300">
-                <FaArrowLeft className="mr-2" />
-                
-            </button>
+    
         <div className="bg-white p-6 sm:p-8 md:p-10 rounded-lg shadow-lg md:shadow-xl w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl">
           <h2 className="text-xl sm:text-2xl font-bold text-black mb-4 sm:mb-6 text-left">Login to Your Account</h2>
           <form className="space-y-4" onSubmit={handleSubmit}>
@@ -173,19 +168,24 @@ const Login = () => {
             Register
           </span>
         </p>
-          <div className="flex items-center justify-between mt-4">
-            <hr className="w-full border-gray-300" />
-            <span className="text-gray-500 px-4">or</span>
-            <hr className="w-full border-gray-300" />
-          </div>
-          <GoogleLogin
-            onSuccess={handleGoogleLoginSuccess}
-            onError={() => {
-              console.log('Login Failed');
-              setError('Google login failed. Please try again.');
-            }}
-          />
+        <div className="flex items-center justify-between mt-4">
+  <hr className="w-full border-gray-300" />
+  <span className="text-gray-500 px-4">or</span>
+  <hr className="w-full border-gray-300" />
+</div>
+<div className="flex justify-center">
+  <GoogleLogin
+    className="w-3/4 mt-4 py-3 bg-red-500 text-white rounded-lg hover:bg-red-700 flex items-center justify-center"
+    onSuccess={handleGoogleLoginSuccess}
+    onError={() => {
+      console.log('Login Failed');
+      setError('Google login failed. Please try again.');
+    }}
+  />
+</div>
+
         </div>
+        
       </div>
     </>
   );

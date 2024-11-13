@@ -1,9 +1,11 @@
+import CartCard from "./cards/CartCard";
 
 const ShopByFragranceFamilies = () => {
   return (
     <div>
       <h1>Shop by Fragrance Families</h1>
       <p>Explore our diverse fragrance families.</p>
+
     </div>
   );
 };

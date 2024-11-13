@@ -704,6 +704,7 @@ const Registeradmin = () => {
           }}
         />
       </div>
+      
     </div>
     </>
    

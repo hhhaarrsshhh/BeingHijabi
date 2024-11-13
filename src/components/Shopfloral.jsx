@@ -4,6 +4,7 @@ const Shopfloral = () => {
   return (
     <div>
       <PageTitle pageTitle={"Fragrence Floral"} />
+      
     </div>
   );
 }

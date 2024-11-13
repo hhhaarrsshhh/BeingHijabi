@@ -4,6 +4,7 @@ const Shopwoody = () => {
   return (
     <div>
       <PageTitle pageTitle={"Woody Fragrances"} />
+      Hi
     </div>
   );
 };
