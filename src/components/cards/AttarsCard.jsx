@@ -3,8 +3,8 @@ import ProductDetail from "./ProductDetail";
 import products from "../ProductData/product";
 
 const AllProductCard = () => {
-  const [visibleProducts, setVisibleProducts] = useState(8); 
-  const [selectedProduct, setSelectedProduct] = useState(null); 
+  const [visibleProducts, setVisibleProducts] = useState(8); // Initially show 8 products
+  const [selectedProduct, setSelectedProduct] = useState(null); // To manage the selected product
 
   // Function to handle loading more products
   const handleLoadMore = () => {
@@ -56,21 +56,7 @@ const AllProductCard = () => {
                   <option>30ml</option>
                 </select>
               </div>
-              <div className="flex items-center mt-3 justify-center space-x-2 border border-gray-300 hover:border-black rounded p-2">
-                <button
-                  className="px-3 py-1 bg-gray-200 rounded focus:outline-none hover:border-black"
-                  onClick={(e) => e.stopPropagation()} // Prevent click propagation
-                >
-                  -
-                </button>
-                <span className="font-medium">{product.quantity}</span>
-                <button
-                  className="px-3 py-1 bg-gray-200 rounded focus:outline-none hover:border-black"
-                  onClick={(e) => e.stopPropagation()} // Prevent click propagation
-                >
-                  +
-                </button>
-              </div>
+              
             </div>
           </div>
         ))}

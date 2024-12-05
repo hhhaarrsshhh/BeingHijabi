@@ -26,7 +26,7 @@ import Search from "../components/Search.jsx";
 import Wishlist from "../components/wishlist.jsx";
 import Productsfortest from "../components/Productsfortest.jsx";
 import Profile from "../components/profile.jsx";
-import Checkout from "../components/checkout.jsx";
+import Checkout from "../components/Checkout.jsx";
 import Order from "../components/order.jsx";
 import CreateOrder from "../components/CreateOrder.jsx";
 import Settings from "../components/settings.jsx";
@@ -60,6 +60,7 @@ const routes = () => {
       </div>
       <Routes>
         <Route path="/" element={<Home />}></Route>
+        
         <Route path="/register" element={<Register />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/admin" element={<Admin />}></Route>
@@ -111,6 +112,7 @@ const routes = () => {
         <Route path="/userorder" element={<UserOrders />}></Route>
         <Route path="/payment" element={<PaymentComponent />}></Route>
         <Route path="*" element={<NotFound />}></Route>
+        <Route path="/checkout" element={<Checkout />}></Route>
       </Routes>
     </>
   );

@@ -7,6 +7,8 @@ import Header from "./Header";
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
 
 import Homeproduct from "./homeProducts";
+
+
 import Footer from "./Footer";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";

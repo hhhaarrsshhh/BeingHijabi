@@ -2,9 +2,9 @@ import { useState } from "react";
 import ProductDetail from "./ProductDetail";
 import products from "../ProductData/product";
 
-const AllProductCard = () => {
-  const [visibleProducts, setVisibleProducts] = useState(8); 
-  const [selectedProduct, setSelectedProduct] = useState(null); 
+const FragranceFamilyCard = () => {
+  const [visibleProducts, setVisibleProducts] = useState(8); // Initially show 8 products
+  const [selectedProduct, setSelectedProduct] = useState(null); // To manage the selected product
 
   // Function to handle loading more products
   const handleLoadMore = () => {
@@ -19,6 +19,11 @@ const AllProductCard = () => {
     setSelectedProduct(null); // Close the modal by setting selectedProduct to null
   };
 
+  const handleAddToCart = (product) => {
+    // Logic for adding the product to the cart
+    console.log(`${product.name} added to cart.`);
+  };
+
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -28,7 +33,7 @@ const AllProductCard = () => {
             className="relative flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-md p-4 transition transform hover:scale-105"
             onClick={() => handleProductClick(product)} // Show product detail when clicked
           >
-            {/* Conditionally render the "New Arrival" tag */}
+            {/* Conditionally render "New Arrival" tag */}
             {product.newArrival && (
               <div className="absolute z-40 top-0 left-0 bg-[rgb(154,42,72)] text-white px-2 py-1 text-xs font-semibold">
                 New Arrival
@@ -71,6 +76,16 @@ const AllProductCard = () => {
                   +
                 </button>
               </div>
+              {/* Add to Cart Button */}
+              <button
+                className="mt-3 w-full bg-black text-white py-2 px-4 rounded hover:bg-gray-500 focus:outline-none"
+                onClick={(e) => {
+                  e.stopPropagation(); // Prevent click propagation
+                  handleAddToCart(product);
+                }}
+              >
+                Add to Cart
+              </button>
             </div>
           </div>
         ))}
@@ -96,4 +111,4 @@ const AllProductCard = () => {
   );
 };
 
-export default AllProductCard;
+export default FragranceFamilyCard;
