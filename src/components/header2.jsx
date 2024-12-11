@@ -122,17 +122,17 @@ const Header2 = () => {
   });
   const [loading, setLoading] = useState(false);
   const fetchProfile = async () => {
-    setLoading(true); // Start loading
-    setError(""); // Clear any previous error
+    setLoading(true);
+    setError(""); 
     try {
       const response = await axios.get(`/users/user/profile?token=${token}`);
-      setProfile(response.data.user); // Set the fetched profile
-      console.log(response.data.user); // Set the fetched profile
+      setProfile(response.data.user); 
+      console.log(response.data.user); 
     } catch (error) {
       console.error("Error fetching profile:", error);
       setError("Failed to fetch profile data. Please try again later.");
     } finally {
-      setLoading(false); // Stop loading after fetching
+      setLoading(false); 
     }
   };
   useEffect(() => {
@@ -141,11 +141,11 @@ const Header2 = () => {
 
   const profileCardRef = useRef(null);
   useEffect(() => {
-    // Animation using GSAP when the component is mounted
+    // Animation  GSAP 
     gsap.fromTo(
       profileCardRef.current,
-      { x: "100%", opacity: 0 }, // Start from left (off-screen) and opacity 0
-      { x: 0, opacity: 1, duration: 1000, ease: "power3.out" } // Slide to original position and fade in
+      { x: "100%", opacity: 0 }, 
+      { x: 0, opacity: 1, duration: 1000, ease: "power3.out" } 
     );
   }, []);
 
@@ -205,7 +205,6 @@ const Header2 = () => {
                 {token ? (
                   <>
                     <div
-                      // Assign ref to the div you want to animate
                       className="max-w-sm rounded overflow-hidden  bg-white p-4 mb-2"
                     >
                       <img
@@ -258,7 +257,6 @@ const Header2 = () => {
                   </>
                 ) : (
                   <div className="">
-                    {/* User is not authenticated: Show Sign In, Sign Up, and Sign in as Admin */}
                     <Link
                       to="/login"
                       className="flex  items-center px-4 py-2 text-black hover:bg-gray-100"

@@ -1,21 +1,20 @@
 import React, { useState } from 'react';
 import axios from '../utils/axios';
 import { toast } from 'react-toastify';
-import { useNavigate } from 'react-router-dom'; // For navigation
+import { useNavigate } from 'react-router-dom';
 
 const Input = ({ id, show, setshow, fetchProductData }) => {
   const [addReview, setAddReview] = useState("");
   const [rating, setRating] = useState(0);
-  const [showPopup, setShowPopup] = useState(false); // State for showing the popup
+  const [showPopup, setShowPopup] = useState(false); 
   const navigate = useNavigate();
 
   const token = document.cookie.split('; ').find(row => row.startsWith('token='))?.split('=')[1];
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); // Prevent page refresh on form submit
+    e.preventDefault(); 
 
     if (!token) {
-      // If no token, show login popup
       setShowPopup(true);
       return;
     }
@@ -52,7 +51,7 @@ const Input = ({ id, show, setshow, fetchProductData }) => {
   };
 
   const redirectToLogin = () => {
-    navigate('/login'); // Navigate to login page
+    navigate('/login'); 
   };
 
   return (

@@ -1,10 +1,8 @@
 import "swiper/css";
-// import "swiper/swiper-bundle.min.css";
-import "swiper/css"; // Core Swiper styles
-import "swiper/css/navigation"; // Navigation module styles
-import "swiper/css/pagination"; // Pagination module styles
+import "swiper/css"; 
+import "swiper/css/navigation"; 
+import "swiper/css/pagination";
 
-// Optional Swiper modules (navigation, pagination, autoplay, etc.)
 
 const ShopCarousel = () => {
   return (

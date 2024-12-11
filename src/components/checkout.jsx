@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const Checkout = () => {
   const location = useLocation();
-  const navigate = useNavigate(); // Initialize the useNavigate hook
+  const navigate = useNavigate(); 
 
   const { product, quantity } = location.state || { product: null, quantity: 0 };
 
@@ -28,7 +28,7 @@ const Checkout = () => {
     e.preventDefault();
     console.log("Form submitted:", formData);
 
-    // Navigate to PaymentComponent after form submission
+    //  PaymentComponent 
     navigate("/payment", { state: { product, quantity, formData } });
   };
 
@@ -157,7 +157,7 @@ const Checkout = () => {
             {product && (
               <div className="flex items-center mb-4">
                 <img
-                  src={product.image} // Make sure `product` includes an image URL
+                  src={product.image} //  `product` includes an image URL
                   alt={product.name}
                   className="w-16 h-16 object-cover mr-4"
                 />

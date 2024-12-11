@@ -1,11 +1,9 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
-// import "swiper/swiper-bundle.min.css";
-import "swiper/css"; // Core Swiper styles
-import "swiper/css/navigation"; // Navigation module styles
-import "swiper/css/pagination"; // Pagination module styles
+import "swiper/css"; 
+import "swiper/css/navigation"; 
+import "swiper/css/pagination"; 
 
-// Import Tailwind CSS if not already included in your project
 
 const Reviews = () => {
   const testimonials = [

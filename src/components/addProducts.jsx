@@ -40,7 +40,7 @@ const AddProducts = () => {
       formData.append('images', image);
     });
 
-    // Extract token from cookies
+    // token from cookies
     const token = document.cookie.split('; ').find(row => row.startsWith('token='))?.split('=')[1];
 
     try {
@@ -95,10 +95,7 @@ const AddProducts = () => {
                 <FaBox />
                 <span>Add Products</span>
               </Link>
-              {/* <Link to="/reports" className="flex items-center space-x-2 hover:text-blue-300 transition">
-                <FaChartLine />
-                <span>Reports</span>
-              </Link> */}
+              
               <Link to="/admin/settings" className="flex items-center space-x-2 hover:text-blue-300 transition">
                 <FaCogs />
                 <span>Settings</span>
@@ -108,13 +105,7 @@ const AddProducts = () => {
         </aside>
 
         <div className="flex-1 p-2">
-          {/* <button
-            onClick={() => navigate(-1)}
-            className="mb-4 flex items-center text-gray-700 px-4 py-2 rounded-lg hover:bg-black hover:text-white transition duration-300"
-          >
-            <FaArrowLeft className="mr-2" />
-            Back
-          </button> */}
+         
           <div className="max-w-3xl w-full  rounded-lg  p-8 md:p-8  mx-auto">
             <h1 className="text-3xl font-bold text-center text-gray-900 mb-6">Add New Product</h1>
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">

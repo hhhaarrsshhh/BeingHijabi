@@ -8,7 +8,6 @@ import { useNavigate } from 'react-router-dom';
 function CategoryLinks() {
   const [products, setProducts] = useState([]);
   const categories = [
-    // { link: 'All', img: 'https://rukminim1.flixcart.com/flap/480/450/image/033f3268031fa0ba.jpg?q=20' , id:1},
     { link: 'All', img: 'https://rukminim1.flixcart.com/flap/480/450/image/0f3d008be60995d4.jpg?q=20', id:2},
     { link: 'Electronics', img: 'https://rukminim1.flixcart.com/flap/480/450/image/42f9a853f9181279.jpg?q=20', id:3 },
     { link: 'Clothing', img: 'https://rukminim1.flixcart.com/flap/480/450/image/f07bb3e1c1392b47.jpg?q=20', id:4 },
@@ -25,10 +24,9 @@ function CategoryLinks() {
  
   const handleCategoryClick = async (category) => {
     try {
-      // Navigate to the Products page with the selected category
       navigate(`/productsforuser?category=${category}`);
       
-      // Fetch products for the selected category
+      //  products for the selected category
       const endpoint = category === "All" ? `/products/all` : `/products/category?category=${category}`;
       const response = await axios.get(endpoint);
 

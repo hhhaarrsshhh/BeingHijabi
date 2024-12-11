@@ -90,17 +90,13 @@ const Homeproduct = () => {
             <div className="p-4">
   <h2 className="relative text-lg font-light font-custom text-gray-700 mb-2">
     {product.name}
-    {/* Underline effect */}
     <span className="block h-[2px] w-0 bg-black transition-all duration-500 ease-in-out group-hover:w-full absolute left-0 bottom-0"></span>
   </h2>
 
-  {/* Price Section */}
   <div className="text-lg font-light text-black">
-    {/* Display actual price with line-through */}
     {product.price !== product.priceAfterDiscount && (
       <span className="text-gray-500 line-through mr-2">Rs. {product.price}</span>
     )}
-    {/* Display discounted price */}
     <span className="text-lg text-black">Rs. {product.priceAfterDiscount}</span>
   </div>
 </div>

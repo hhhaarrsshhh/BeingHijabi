@@ -20,6 +20,7 @@ const ViewCart = () => {
   const handleViewProductClick = (productId) => {
     navigate(`/singleproduct/${productId}`);
   };
+
   const fetchProducts = async () => {
     const token = document.cookie
       .split("; ")
@@ -127,7 +128,6 @@ const ViewCart = () => {
         >
           <FaArrowLeft className="mr-2" />
         </button>
-        {/* Left Side - Cart Items */}
         <div className="flex-1 overflow-y-auto mt-10 p-4 lg:w-2/3">
           {loadingCart ? (
             <div className="flex justify-center items-center h-64">
@@ -146,15 +146,12 @@ const ViewCart = () => {
                     key={item._id}
                     className="relative flex flex-col items-center justify-center border border-gray-200 p-4 shadow-md rounded-lg bg-white"
                   >
-                    {/* Close Button */}
                     <button
                       onClick={() => handleRemove(item._id)}
                       className="absolute top-2 right-2 text-gray-600 hover:text-red-600"
                     >
                       <IoMdClose size={20} />
                     </button>
-
-                    {/* Product Image */}
                     <img
                       src={item.images[0]}
                       alt={item.name}
@@ -171,13 +168,9 @@ const ViewCart = () => {
                         </span>
                       </p>
                       <p className="text-gray-800">
-                        Final Price :{" "}
-                        <span className="text-green-600 font-semibold">
-                          {item.priceAfterDiscount}
-                        </span>
+                        Final Price : <span className="text-green-600 font-semibold">{item.priceAfterDiscount}</span>
                       </p>
                       <div className="flex items-center justify-center mt-2">
-                        {/* Quantity Selector with + and - */}
                         <div className="flex items-center space-x-1">
                           <button
                             onClick={() =>
@@ -210,9 +203,8 @@ const ViewCart = () => {
           )}
         </div>
 
-        {/* Right Side - Summary */}
         {cart.length > 0 && (
-          <div className="lg:w-1/3 lg:h-72 bg-white p-6  shadow-md lg:sticky lg:top-0  mt-10 rounded-lg">
+          <div className="lg:w-1/3 lg:h-72 bg-white p-6 shadow-md lg:sticky lg:top-0 mt-10 rounded-lg">
             <h2 className="text-lg font-semibold mb-4">Order Summary</h2>
             <div className="space-y-2">
               <div className="flex justify-between">
@@ -246,18 +238,3 @@ const ViewCart = () => {
 };
 
 export default ViewCart;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

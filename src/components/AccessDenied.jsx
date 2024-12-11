@@ -7,7 +7,7 @@ const AccessDenied = () => {
   const navigate = useNavigate();
 
   const handleGoBack = () => {
-    navigate('/'); // Redirect to home page or another relevant page
+    navigate('/'); // Redirect to home page 
   };
 
   return (

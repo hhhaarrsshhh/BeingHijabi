@@ -98,7 +98,7 @@ const Login = () => {
               <label htmlFor="email" className="block text-sm sm:text-base font-semibold text-gray-700 mb-2">Email Address</label>
               <input
                 type="email"
-                name="email" // Updated to use "name" instead of "id"
+                name="email" 
                 value={formData.email}
                 onChange={handleChange}
                 className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black"
@@ -110,7 +110,7 @@ const Login = () => {
               <label htmlFor="password" className="block text-sm sm:text-base font-semibold text-gray-700 mb-2">Password</label>
               <input
                 type={showPassword ? 'text' : 'password'}
-                name="password" // Updated to use "name" instead of "id"
+                name="password" 
                 value={formData.password}
                 onChange={handleChange}
                 className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black pr-12"

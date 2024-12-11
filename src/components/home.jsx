@@ -66,7 +66,6 @@ const Home = () => {
       <ShopNowSection />
       <HomeBestSellers />
       <Reviews />
-      {/* Footer */}
       <div ref={footerRef}>
         <Footer />
       </div>

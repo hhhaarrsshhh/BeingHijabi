@@ -3,7 +3,7 @@ const HomeShopByFragrance = () => {
   const fragranceFamilies = [
     {
       name: "Floral",
-      image: "/floral.jpg", // Assuming your image is in the public/images folder
+      image: "/floral.jpg", 
       route: "/shopfloral",
     },
     {

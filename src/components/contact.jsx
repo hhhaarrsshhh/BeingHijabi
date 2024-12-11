@@ -28,8 +28,7 @@ const Contact = () => {
         formData
       );
       alert("Form submitted successfully!");
-      console.log(response.data); // Log response from the server (optional)
-      // Reset form after submission
+      console.log(response.data); // 
       setFormData({
         name: "",
         email: "",

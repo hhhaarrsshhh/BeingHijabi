@@ -126,17 +126,17 @@ const Header = () => {
   });
   const [loading, setLoading] = useState(false);
   const fetchProfile = async () => {
-    setLoading(true); // Start loading
-    setError(""); // Clear any previous error
+    setLoading(true); 
+    setError(""); 
     try {
       const response = await axios.get(`/users/user/profile?token=${token}`);
-      setProfile(response.data.user); // Set the fetched profile
-      console.log(response.data.user); // Set the fetched profile
+      setProfile(response.data.user);
+      console.log(response.data.user); 
     } catch (error) {
       console.error("Error fetching profile:", error);
       setError("Failed to fetch profile data. Please try again later.");
     } finally {
-      setLoading(false); // Stop loading after fetching
+      setLoading(false); 
     }
   };
 
@@ -182,11 +182,11 @@ const Header = () => {
 
   const profileCardRef = useRef(null);
   useEffect(() => {
-    // Animation using GSAP when the component is mounted
+    // Animation  GSAP 
     gsap.fromTo(
       profileCardRef.current,
-      { x: "100%", opacity: 0 }, // Start from left (off-screen) and opacity 0
-      { x: 0, opacity: 1, duration: 1000, ease: "power3.out" } // Slide to original position and fade in
+      { x: "100%", opacity: 0 }, 
+      { x: 0, opacity: 1, duration: 1000, ease: "power3.out" } 
     );
   }, []);
 

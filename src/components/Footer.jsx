@@ -15,7 +15,6 @@ const Footer = () => {
     e.preventDefault();
     if (email) {
       try {
-        // Replace with your API endpoint
         const response = await axios.post("users/user/subscribe", { email });
         setMessage(
           <div className="flex items-center justify-center space-x-2 text-green-500">
@@ -23,7 +22,7 @@ const Footer = () => {
             <span>Subscription successful!</span>
           </div>
         );
-        setEmail(""); // Clear the input field after success
+        setEmail(""); 
       } catch (error) {
         setMessage("Subscription failed. Please try again.");
       }

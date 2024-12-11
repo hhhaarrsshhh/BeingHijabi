@@ -4,12 +4,12 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 const Shoporiental = () => {
-  const location = useLocation(); // Get the current location
+  const location = useLocation(); 
 
-  // Scroll to top when location changes
+  
   useEffect(() => {
-    window.scrollTo(0, 0); // Scroll to top
-  }, [location]); // This will run when the location changes
+    window.scrollTo(0, 0);
+  }, [location]); 
 
   return (
     <div>

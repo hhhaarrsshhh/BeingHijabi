@@ -3,20 +3,19 @@ import ProductDetail from "./ProductDetail";
 import products from "../ProductData/product";
 
 const AllProductCard = () => {
-  const [visibleProducts, setVisibleProducts] = useState(8); // Initially show 8 products
-  const [selectedProduct, setSelectedProduct] = useState(null); // To manage the selected product
+  const [visibleProducts, setVisibleProducts] = useState(8);
+  const [selectedProduct, setSelectedProduct] = useState(null);
 
-  // Function to handle loading more products
   const handleLoadMore = () => {
-    setVisibleProducts((prevVisible) => prevVisible + 8); // Load 8 more products
+    setVisibleProducts((prevVisible) => prevVisible + 8);
   };
 
   const handleProductClick = (product) => {
-    setSelectedProduct(product); // Open product details on click
+    setSelectedProduct(product);
   };
 
   const closeModal = () => {
-    setSelectedProduct(null); // Close the modal by setting selectedProduct to null
+    setSelectedProduct(null);
   };
 
   return (
@@ -26,9 +25,8 @@ const AllProductCard = () => {
           <div
             key={index}
             className="relative flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-md p-4 transition transform hover:scale-105"
-            onClick={() => handleProductClick(product)} // Show product detail when clicked
+            onClick={() => handleProductClick(product)}
           >
-            {/* Conditionally render the "New Arrival" tag */}
             {product.newArrival && (
               <div className="absolute z-40 top-0 left-0 bg-[rgb(154,42,72)] text-white px-2 py-1 text-xs font-semibold">
                 New Arrival
@@ -48,7 +46,7 @@ const AllProductCard = () => {
               <div className="w-full border border-gray-300 hover:border-black rounded px-3 py-2 mt-2 text-sm">
                 <select
                   className="w-full"
-                  onClick={(e) => e.stopPropagation()} // Prevent click propagation
+                  onClick={(e) => e.stopPropagation()}
                 >
                   <option>Size</option>
                   <option>10ml</option>
@@ -56,13 +54,11 @@ const AllProductCard = () => {
                   <option>30ml</option>
                 </select>
               </div>
-              
             </div>
           </div>
         ))}
       </div>
 
-      {/* Load More button */}
       {visibleProducts < products.length && (
         <div className="flex justify-center mt-8">
           <button
@@ -74,7 +70,6 @@ const AllProductCard = () => {
         </div>
       )}
 
-      {/* Show ProductDetail modal when a product is selected */}
       {selectedProduct && (
         <ProductDetail product={selectedProduct} closeModal={closeModal} />
       )}

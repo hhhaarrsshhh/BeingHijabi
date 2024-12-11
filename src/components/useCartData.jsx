@@ -17,7 +17,7 @@ const useCartData = () => {
         } catch (err) {
             console.error('Error fetching cart data:', err);
             setError('Unable to fetch cart data. Please try again later.');
-            setCart(0); // Fall back to empty cart in case of an error
+            setCart(0);
         }
     };
 
